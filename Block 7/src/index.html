@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 		<title>Template</title>
 		<link rel="icon" href="img/favicon.png">
@@ -11,9 +11,44 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-	<img src="./img/webpack.svg" alt="Webpack Logo" width="200px">
-	<h3>Welcome to Webpack 4 starter </h3>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum iure voluptates quam harum illum quae ipsum, nihil quis illo nemo. Cupiditate earum blanditiis provident facilis impedit nisi pariatur dolorum harum ad illo quas nulla, corrupti ut! Maxime consequatur quam eum, inventore ex architecto ipsam! Ea velit numquam sequi facilis soluta.</p>
-	<a href="" class="check"></a>
+	<div class="cols">
+		<aside class="cols__left sidebar">
+			<header class="sidebar__header">
+				<a href="index.html" class="sidebar__logo"><img src="img/logo.svg" alt="Logo CPS"></a>
+				<div class="sidebar__search search">
+					<input type="text" class="search__input">
+					<a href="#" class="search__reset"></a>
+					<button class="search__btn"></button>
+				</div>
+			</header>
+			<nav class="sidebar__nav nav">
+				<ul class="nav__list">
+					<li class="nav__item"><a href="#" class="nav__link">Ремонт техники</a></li>
+					<li class="nav__item"><a href="#" class="nav__link nav__link-active">Услуги и сервисы</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Корпоративным клиентам</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Продавцам техники</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Партнерам</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Производителям</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Наши сервисные центры</a></li>
+					<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
+				</ul>
+			</nav>
+			<footer class="sidebar__footer footer">
+				<div class="footer__links">
+					<a href="tel:88008908900" class="footer__btn footer__btn-phone"></a>
+					<a href="#" class="footer__btn footer__btn-chat"></a>
+					<a href="#" class="footer__btn footer__btn-contacts"></a>
+				</div>
+				<a href="mailto:mail@cps.com" class="footer__email footer__link">mail@cps.com</a>
+				<a href="tel:88008908900" class="footer__phone footer__link">8 800 890 8900</a>
+				<div class="footer__lang-choice">
+					<a href="#" class="footer__lang footer__link footer__lang-active">RU</a>
+					<a href="#" class="footer__lang footer__link">EN</a>
+					<a href="#" class="footer__lang footer__link">CH</a>
+				</div>
+			</footer>
+		</aside>
+		<div class="cols__right"></div>
+	</div>
 </body>
 </html>

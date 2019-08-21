@@ -1,4 +1,6 @@
+@import "./blocks/normalize.css";
 @import "vars";
+@import "./blocks/aside";
 
 @font-face {
   font-family: 'Lakes-Bold';
@@ -20,11 +22,10 @@
 }
 
 body {
-  padding: 1rem;
   margin: 0;
   font-family: $medium;
-  background-color: $textBlack;
-  color: $textGray;
+	color: $textGray;
+	display: flex;
 }
 h3 {
 	@extend %btn;
