@@ -1,0 +1,35 @@
+$pink: #FF3E79;
+$textBlack: #1B1C21;
+$textGray: #7E7E82;
+$bgColor: #F8F8F8;
+$activeBlue: #41F6D7;
+$blue: #B8FFEC;
+
+$bold: 'Lakes-Bold', sans-serif;
+$reg: 'Lakes-Regular', sans-serif;
+$medium: 'Lakes-Medium', sans-serif;
+
+%btn {
+	background-color: $pink;
+	border-radius: 18px;
+}
+
+%btn-arrow {
+	display: block;
+	width: 40px;
+	height: 40px;
+	border: 2px solid $pink;
+	border-radius: 50%;
+	position: relative;
+	&:after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 46%;
+		transform: translate(-50%, -50%) rotate(-45deg);
+		width: 9px;
+		height: 9px;
+		border-bottom: 2px solid $pink;
+		border-right: 2px solid $pink;
+	}
+}
