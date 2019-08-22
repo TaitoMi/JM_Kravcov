@@ -1,0 +1,75 @@
+.brands {
+	&__title {
+		border-top: 1px solid #D9FFF5;
+		padding: 16px 32px;
+		color: $textGray;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-family: $reg;
+		margin-top: 44px;
+		background: linear-gradient(45deg, $bgColor 0%, #FFFFFF 98.61%);
+	}
+	&__items {
+		display: flex;
+		padding-left: 16px;
+		margin-top: 22px;
+		flex-wrap: wrap;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin: 8px 16px;
+		height: 72px;
+		width: 240px;
+		background-color: #fff;
+		border: 1px solid #EAEAEA;
+		border-radius: 6px;
+		&-arrow {
+			@extend %btn-arrow;
+			margin-right: 18px;
+		}
+	}
+	&__logo {
+		display: block;
+		margin-left: 20px;
+	}
+	&__more {
+		padding-left: 30px;
+		margin-left: 32px;
+		text-decoration: none;
+		font-family: $medium;
+		color: $textBlack;
+		font-size: 16px;
+		position: relative;
+		transition: all .3s ease;
+		&::before, &::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			left: 9px;
+			transition: all .3s ease;
+			border-bottom: 2px solid $activeBlue;
+			border-right: 2px solid $activeBlue;
+			border-radius: 2px;
+			transform: rotate(45deg) translate(1px, 1px);
+		}
+		&::after {
+			bottom: 7px;
+		}
+		&:hover {
+			color: lighten($textBlack, 30%);
+			text-shadow: 1px 1px 2px black;
+			&::before, &::after {
+				border-color: darken($activeBlue, 20%);
+			}
+		}
+		&-active {
+			&::before, &::after {
+				transform: rotate(225deg) translate(-3px, -3px);
+			}
+		}
+	}
+}

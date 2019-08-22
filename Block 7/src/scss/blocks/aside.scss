@@ -18,6 +18,10 @@
 			z-index: 2;
 		} 
 	}
+	&__right {
+		width: 79vw;
+		background: $bgColor;
+	}
 }
 
 .sidebar {
@@ -66,7 +70,7 @@
 		margin-left: 15px;
 		cursor: pointer;
 		padding: 0;
-		transition: all .5s ease;
+		transition: all .2s ease;
 		background: $pink url('../img/i-search.svg') no-repeat center;
 		&:hover {
 			background-color: lighten($pink, 10%);

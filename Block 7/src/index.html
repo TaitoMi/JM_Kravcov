@@ -15,10 +15,10 @@
 		<aside class="cols__left sidebar">
 			<header class="sidebar__header">
 				<a href="index.html" class="sidebar__logo"><img src="img/logo.svg" alt="Logo CPS"></a>
-				<div class="sidebar__search search">
+				<div class="sidebar__search search"> <!-- Надо ли было этот блок сделать тегом form, и использовать вместо a.reset, input[type='reset']? -->
 					<input type="text" class="search__input">
 					<a href="#" class="search__reset"></a>
-					<button class="search__btn"></button>
+					<button class="search__btn"></button>					
 				</div>
 			</header>
 			<nav class="sidebar__nav nav">
@@ -48,7 +48,121 @@
 				</div>
 			</footer>
 		</aside>
-		<div class="cols__right"></div>
+		<div class="cols__right ">
+			<header class="mob-header"></header>
+			<section class="service">
+				<header class="service__header">
+					<h1 class="service__title">Услуги и сервисы</h1>
+					<div class="service__buttons">
+						<a href="#" class="service__link">Оставить заявку <span class="service__link-img"></span></a>
+						<a href="#" class="service__link">Статус ремонта <span class="service__link-img"></span></a>
+					</div>
+				</header>
+				<div class="service__tabs tabs">
+					<ul class="tabs__list">
+						<li class="tabs__item tabs__item-active">Ремонтируемые бренды</li>
+						<li class="tabs__item">Ремонтируемые устройства</li>
+						<li class="tabs__item">Цены на услуги</li>
+						<li class="tabs__item">Адреса сервисных центров</li>
+						<li class="tabs__item">Специальные цены</li>
+						<li class="tabs__item">Отзывы</li>
+					</ul>
+					<section class="tabs__content">
+						<div class="tabs__feedback feedback">
+							<div class="feedback__content feedback__content-active">
+								<article class="feedback__text-block">
+										<p class="feedback__text">
+											Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+											Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+											<br> <br>	
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+										</p>
+										<a href="#" class="feedback__more">Читать далее</a>
+								</article>								
+								<img src="img/feedback-img1.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+							<div class="feedback__content">
+								<article class="feedback__text-block">
+										<p class="feedback__text">
+											Это второй таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+											Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+											<br> <br>	
+											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+										</p>
+										<a href="#" class="feedback__more">Читать далее</a>
+								</article>								
+								<img src="img/feedback-img2.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+							<div class="feedback__content">
+								<article class="feedback__text-block">
+									<p class="feedback__text">
+										Это третий таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+										<br> <br>	
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+									</p>
+									<a href="#" class="feedback__more">Читать далее</a>
+								</article>
+								<img src="img/feedback-img3.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+							<div class="feedback__content">
+								<article class="feedback__text-block">
+									<p class="feedback__text">
+										Это четвертый таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+										<br> <br>	
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+									</p>
+									<a href="#" class="feedback__more">Читать далее</a>
+								</article>
+								<img src="img/feedback-img4.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+							<div class="feedback__content">
+								<article class="feedback__text-block">
+									<p class="feedback__text">
+										Это пятый таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+										<br> <br>	
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+									</p>
+									<a href="#" class="feedback__more">Читать далее</a>
+								</article>
+								<img src="img/feedback-img5.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+							<div class="feedback__content">
+								<article class="feedback__text-block">
+									<p class="feedback__text">
+										Это шестой таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
+										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+										<br> <br>	
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+									</p>
+									<a href="#" class="feedback__more">Читать далее</a>
+								</article>
+								<img src="img/feedback-img6.jpg" alt="Компания CPS" class="feedback__img">
+							</div>
+						</div>						
+					</section>
+				</div>
+			</section>
+			<section class="brands">
+				<h2 class="brands__title">Ремонт техники различных брендов</h2>
+				<div class="brands__items">
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-samsung.svg" alt="Samsung"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-sonic.svg" alt="View Sonic"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-hp.svg" alt="HP"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-acer.svg" alt="Acer"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-sony.svg" alt="SONY"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
+					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
+				</div>
+				<a href="#" class="brands__more">Показать все</a>
+			</section>
+		</div>
 	</div>
 </body>
 </html>
