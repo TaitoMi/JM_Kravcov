@@ -1,0 +1,49 @@
+.repair {
+	padding-bottom: 20px;
+	&__title {
+		@extend %title;
+		margin-top: 58px;
+	}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 21px;
+		padding-left: 16px;
+		overflow: hidden;
+		height: 180px;
+		&-active {
+			height: auto;
+		}
+	}
+	&__item {
+		display: block;
+		color: $textBlack;
+		border: 1px solid #EAEAEA;
+		box-sizing: border-box;
+		border-radius: 6px;
+		width: 240px;
+		height: 160px;
+		text-decoration: none;
+		background-color: #fff;
+		padding: 18px;
+		margin: 8px 16px; 
+		position: relative;
+		&-arrow {
+			position: absolute;
+			@extend %btn-arrow;
+			right: 16px;
+			bottom: 16px;
+		}
+	}
+	&__more {
+		color: $textBlack;
+		font-family: $medium;
+		font-size: 16px;
+		@extend %more;
+		&-active {
+			&::before, &::after {
+				transform: rotate(225deg) translate(-3px, -3px);
+			}
+		}
+	}
+}

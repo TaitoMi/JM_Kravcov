@@ -3,36 +3,17 @@
 @import "./blocks/aside";
 @import "./blocks/services";
 @import "./blocks/brands";
+@import "./blocks/repair";
+@import "./blocks/price";
+@import "./blocks/adress";
+@import "./blocks/footer";
 
-@font-face {
-  font-family: 'Lakes-Bold';
-  src: url('../fonts/TTLakes-Bold.woff') format('woff');
-  font-weight: 700;
-}
 
-@font-face {
-  font-family: 'Lakes-Medium';
-  src: url('../fonts/TTLakes-Medium.woff') format('woff');
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: 'Lakes-Regular';
-  src: url('../fonts/TTLakes-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-}
 
 body {
   margin: 0;
   font-family: $medium;
 	color: $textGray;
 	display: flex;
-}
-h3 {
-	@extend %btn;
-}
-.check {
-	@extend %btn-arrow;
-	background:url('../img/logo.svg') no-repeat center;
+	overflow-x: hidden;
 }

@@ -19,6 +19,7 @@
 		} 
 	}
 	&__right {
+		box-sizing: border-box;
 		width: 79vw;
 		background: $bgColor;
 	}
@@ -156,7 +157,7 @@
 		}		
 	}
 }
-.footer {
+.side-footer {
 	display: flex;
 	flex-direction: column;
 	padding-left: 17px;

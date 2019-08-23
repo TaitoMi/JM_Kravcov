@@ -1,0 +1,41 @@
+.adress {
+	&__title {
+		@extend %title;
+	}
+	&__partners {
+		position: relative;
+		margin-top: 38px;
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__link {
+		@extend %link;
+		margin-right: 64px;
+	}
+	&__map {
+		height: 56.5vh;
+		width: auto;
+
+		box-sizing: border-box;
+		margin: 28px 48px 0 32px;
+		border-radius: 6px;
+		border: 1px solid red;
+	}
+	&__description {
+		margin-left: -16px;
+		display: flex;
+		justify-content: center;
+		color: $textBlack;
+		font-size: 14px;
+		font-family: $reg;
+		flex-wrap: wrap;
+	}
+}
+
+.description {
+	&__item {
+		width: 512px;
+		line-height: 20px;
+		margin: 25px 16px 0 16px;
+	}
+}

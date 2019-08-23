@@ -5,9 +5,52 @@ $bgColor: #F8F8F8;
 $activeBlue: #41F6D7;
 $blue: #B8FFEC;
 
+@font-face {
+  font-family: 'Lakes-Bold';
+  src: url('../fonts/TTLakes-Bold.woff') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lakes-Medium';
+  src: url('../fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Lakes-Regular';
+  src: url('../fonts/TTLakes-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
 $bold: 'Lakes-Bold', sans-serif;
 $reg: 'Lakes-Regular', sans-serif;
 $medium: 'Lakes-Medium', sans-serif;
+
+%link {
+	color: $textBlack;
+	text-decoration: none;
+	font-family: $medium;
+	font-size: 16px;
+	position: relative;
+	transition: all .3s ease;
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		border-bottom: 3px solid $pink;
+		border-right: 3px solid $pink;
+		border-radius: 3px;
+		right: -15px;
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+	&:hover {
+		color: $textGray;
+	}
+}
 
 %btn {
 	display: block;
@@ -15,6 +58,53 @@ $medium: 'Lakes-Medium', sans-serif;
 	border-radius: 50%;
 	width: 40px;
 	height: 40px;
+}
+
+%more {
+	display: block;
+	padding-left: 30px;
+	margin-left: 32px;
+	margin-top: 10px;
+	text-decoration: none;
+	font-family: $medium;
+	color: $textBlack;
+	font-size: 16px;
+	position: relative;
+	transition: all .3s ease;
+	&::before, &::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 5px;
+		height: 5px;
+		left: 9px;
+		transition: all .3s ease;
+		border-bottom: 2px solid $activeBlue;
+		border-right: 2px solid $activeBlue;
+		border-radius: 2px;
+		transform: rotate(45deg) translate(1px, 1px);
+	}
+	&::after {
+		bottom: 4px;
+	}
+	&:hover {
+		color: lighten($textBlack, 30%);
+		text-shadow: 1px 1px 2px black;
+		&::before, &::after {
+			border-color: darken($activeBlue, 20%);
+		}
+	}
+}
+
+%title {
+	border-top: 1px solid #D9FFF5;
+	padding: 16px 32px;
+	color: $textGray;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: $reg;
+	margin-top: 44px;
+	background: linear-gradient(45deg, $bgColor 0%, #FFFFFF 98.61%);
 }
 
 %btn-arrow {

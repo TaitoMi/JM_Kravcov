@@ -1,0 +1,15 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 48px 32px 32px;
+	color: $textGray;
+	font-family: $reg;
+	font-size: 14px;
+	margin-top: 83px;
+	&__copyrights {
+		text-align-last: left;
+	}
+	&__information {
+		text-align: right;
+	}
+}

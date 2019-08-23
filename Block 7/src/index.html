@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
 		<link rel="stylesheet" href="css/styles.min.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
@@ -33,18 +34,18 @@
 					<li class="nav__item"><a href="#" class="nav__link">Контакты</a></li>
 				</ul>
 			</nav>
-			<footer class="sidebar__footer footer">
-				<div class="footer__links">
-					<a href="tel:88008908900" class="footer__btn footer__btn-phone"></a>
-					<a href="#" class="footer__btn footer__btn-chat"></a>
-					<a href="#" class="footer__btn footer__btn-contacts"></a>
+			<footer class="sidebar__footer side-footer">
+				<div class="side-footer__links">
+					<a href="tel:88008908900" class="side-footer__btn side-footer__btn-phone"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-chat"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-contacts"></a>
 				</div>
-				<a href="mailto:mail@cps.com" class="footer__email footer__link">mail@cps.com</a>
-				<a href="tel:88008908900" class="footer__phone footer__link">8 800 890 8900</a>
-				<div class="footer__lang-choice">
-					<a href="#" class="footer__lang footer__link footer__lang-active">RU</a>
-					<a href="#" class="footer__lang footer__link">EN</a>
-					<a href="#" class="footer__lang footer__link">CH</a>
+				<a href="mailto:mail@cps.com" class="side-footer__email side-footer__link">mail@cps.com</a>
+				<a href="tel:88008908900" class="side-footer__phone side-footer__link">8 800 890 8900</a>
+				<div class="side-footer__lang-choice">
+					<a href="#" class="side-footer__lang side-footer__link side-footer__lang-active">RU</a>
+					<a href="#" class="side-footer__lang side-footer__link">EN</a>
+					<a href="#" class="side-footer__lang side-footer__link">CH</a>
 				</div>
 			</footer>
 		</aside>
@@ -76,6 +77,8 @@
 											Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
 											<br> <br>	
 											Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
+											<br><br>
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi iusto expedita beatae, ducimus magni, earum debitis adipisci ipsa ut nobis dignissimos, quisquam accusamus illum consequatur doloremque? Ab consequatur debitis at vero porro sapiente molestiae, perspiciatis accusamus ea enim magnam, pariatur architecto eos. Vitae dolor ad quae, vero cumque repudiandae.
 										</p>
 										<a href="#" class="feedback__more">Читать далее</a>
 								</article>								
@@ -147,22 +150,122 @@
 			</section>
 			<section class="brands">
 				<h2 class="brands__title">Ремонт техники различных брендов</h2>
-				<div class="brands__items">
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-samsung.svg" alt="Samsung"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-sonic.svg" alt="View Sonic"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-hp.svg" alt="HP"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-acer.svg" alt="Acer"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-sony.svg" alt="SONY"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
-					<a href="#" class="brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
-				</div>
+				<div class="swiper-container">
+					<div class="brands__items swiper-wrapper">
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-samsung.svg" alt="Samsung"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-sonic.svg" alt="View Sonic"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-hp.svg" alt="HP"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-acer.svg" alt="Acer"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-sony.svg" alt="SONY"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-bosch.svg" alt="BOSCH"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-apple.svg" alt="Apple"><span class="brands__item-arrow"></span></a>
+						<a href="#" class="swiper-slide brands__item"><img class="brands__logo" src="img/logo-lenovo.svg" alt="Lenovo"><span class="brands__item-arrow"></span></a>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>				
 				<a href="#" class="brands__more">Показать все</a>
 			</section>
+			<section class="repair">
+				<h2 class="repair__title">Ремонт различных видов техники</h2>		
+				<div class="repair__items">
+					<a href="#" class="repair__item">Ремонт ноутбуков<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт планшетов<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт ПК<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт мониторов<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт ноутбуков1<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт планшетов1<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт ПК1<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт мониторов1<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт ноутбуков2<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт планшетов2<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт ПК2<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт мониторов2<span class="repair__item-arrow"></span></a>
+					<a href="#" class="repair__item">Ремонт мониторов3<span class="repair__item-arrow"></span></a>
+				</div>		
+				<a href="#" class="repair__more">Показать все</a>
+			</section>
+			<section class="price">
+				<h2 class="price__title">цены на услуги</h2>
+				<div class="price__table table">
+					<div class="table__head">
+						<span class="table__head-column table__head-column-1">Ремонтные услуги</span>
+						<span class="table__head-column table__head-column-2">Цена</span>
+						<span class="table__head-column table__head-column-3">Срок</span>
+					</div>
+					<ul class="table__rows">
+						<li class="table__row">
+							<span class="table__row-column-1">Диагностика</span>
+							<span class="table__row-column-2">Бесплатно</span>
+							<span class="table__row-column-3">30 мин</span>
+							<a href="#" class="table__row-column-4">Заказать</a>
+						</li>
+						<li class="table__row">
+							<span class="table__row-column-1">Замена дисплея</span>
+							<span class="table__row-column-2">1000 ₽</span>
+							<span class="table__row-column-3">30-120 мин</span>
+							<a href="#" class="table__row-column-4">Заказать</a>
+						</li>
+						<li class="table__row">
+							<span class="table__row-column-1">Замена полифонического динамика</span>
+							<span class="table__row-column-2">1000 ₽</span>
+							<span class="table__row-column-3">30-120 мин</span>
+							<a href="#" class="table__row-column-4">Заказать</a>
+						</li>
+						<li class="table__row">
+							<span class="table__row-column-1">Тестирование с выдачей технического заключения</span>
+							<span class="table__row-column-2">1000 ₽</span>
+							<span class="table__row-column-3">30-120 мин</span>
+							<a href="#" class="table__row-column-4">Заказать</a>
+						</li>
+						<li class="table__row">
+							<span class="table__row-column-1">Заменя программного обеспечения</span>
+							<span class="table__row-column-2">1000 ₽</span>
+							<span class="table__row-column-3">30-120 мин</span>
+							<a href="#" class="table__row-column-4">Заказать</a>
+						</li>
+					</ul>
+				</div>
+				<p class="price__description">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
+				<a href="#" class="price__get-offer">Получить коммерческое предложение</a>
+			</section>
+			<section class="adress">
+				<h2 class="adress__title">адреса сервисных центров</h2>
+				<div class="adress__partners">					
+					<a href="#" class="adress__link">Наши партнеры</a>
+				</div>
+				<div class="adress__map"></div>
+				<div class="adress__description description">
+					<article class="description__item">						
+						Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань, Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и проходят ежемесячную проверку качества оказываемых услуг.
+					</article>
+					<article class="description__item">						
+						Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань, Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и проходят ежемесячную проверку качества оказываемых услуг.
+					</article>
+					<article class="description__item">						
+						Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань, Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и проходят ежемесячную проверку качества оказываемых услуг.
+					</article>
+					<article class="description__item">						
+						Наши сервисные центры расположены по всей России, в таких городах, как Москва, Санкт-Петербург, Казань, Нижний Новгород, владивосток, и др. Все сервисные центры являются авторизованными и имеют единую базу и проходят ежемесячную проверку качества оказываемых услуг.
+					</article>
+				</div>
+			</section>
+			<footer class="footer">
+				<div class="footer__copyrights">
+					© 2019 CPS <br>
+					Разработано командой Apesong
+				</div>
+				<div class="footer__politic">
+					Политика конфиденциальности
+				</div>
+				<div class="footer__information">
+					Информация, размещенная на данной странице, <br> не является публичной офертой
+				</div>
+			</footer>
 		</div>
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 </body>
 </html>

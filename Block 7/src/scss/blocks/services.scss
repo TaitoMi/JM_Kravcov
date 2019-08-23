@@ -3,6 +3,9 @@
 }
 .service {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: space-between;
 	&__header {
 		padding-top: 21px;
 		display: flex;
@@ -86,8 +89,6 @@
 			background-color: #fff;
 		}
 	}
-	&__content {
-	}
 }
 
 .feedback {
@@ -102,51 +103,27 @@
 	&__text-block {
 		font-size: 14px;
 		line-height: 20px;
-		width: 46%;
+		width: 34.6vw;
 		display: block;
 	}
 	&__text {
 		margin: 0;
 		padding-top: 15px;
 		overflow: hidden;
-		height: 170px;
+		height: 230px;
 		transition: all .3s ease;
+		@media screen and (max-width: 1500px) {
+			height: 170px;
+		}
 		&-active {
 			height: auto;
 		}
 	}
-	&__more {
-		display: block;
-		margin-top: 20px;
-		padding-left: 30px;
-		text-decoration: none;
-		font-family: $medium;
-		color: $textBlack;
-		font-size: 16px;
-		position: relative;
-		transition: all .3s ease;
-		&::before, &::after {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 5px;
-			height: 5px;
-			left: 9px;
-			transition: all .3s ease;
-			border-bottom: 2px solid $activeBlue;
-			border-right: 2px solid $activeBlue;
-			border-radius: 2px;
-			transform: rotate(45deg) translate(1px, 1px);
-		}
+	&__more {		
+		@extend %more;
+		margin-left: 0;
 		&::after {
 			bottom: 7px;
-		}
-		&:hover {
-			color: lighten($textBlack, 30%);
-			text-shadow: 1px 1px 2px black;
-			&::before, &::after {
-				border-color: darken($activeBlue, 20%);
-			}
 		}
 		&-active {
 			&::before, &::after {
@@ -158,7 +135,7 @@
 		display: block;
 		border-radius: 7px;
 		margin-left: 15px;
-		width: 540px;
-		height: 305px;
+		width: 36.5vw;
+		object-fit: contain;
 	}
 }

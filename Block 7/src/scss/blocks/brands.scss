@@ -1,19 +1,18 @@
 .brands {
+	box-sizing: border-box;
 	&__title {
-		border-top: 1px solid #D9FFF5;
-		padding: 16px 32px;
-		color: $textGray;
-		text-transform: uppercase;
-		font-size: 16px;
-		font-family: $reg;
-		margin-top: 44px;
-		background: linear-gradient(45deg, $bgColor 0%, #FFFFFF 98.61%);
+		@extend %title;
 	}
 	&__items {
 		display: flex;
 		padding-left: 16px;
-		margin-top: 22px;
+		margin-top: 9px;
 		flex-wrap: wrap;
+		height: 185px;
+		transition: all .3s ease;
+		&-active {
+			height: auto;
+		}
 	}
 	&__item {
 		display: flex;
@@ -25,9 +24,17 @@
 		background-color: #fff;
 		border: 1px solid #EAEAEA;
 		border-radius: 6px;
+		transition: all .3s ease;
 		&-arrow {
 			@extend %btn-arrow;
 			margin-right: 18px;
+			transition: all .3s ease;
+		}
+		&:hover {
+			box-shadow: 0px 0px 5px 1px $textBlack;
+			.brands__item-arrow {
+				box-shadow: 0px 0px 5px 1px $textBlack;
+			}
 		}
 	}
 	&__logo {
@@ -35,37 +42,7 @@
 		margin-left: 20px;
 	}
 	&__more {
-		padding-left: 30px;
-		margin-left: 32px;
-		text-decoration: none;
-		font-family: $medium;
-		color: $textBlack;
-		font-size: 16px;
-		position: relative;
-		transition: all .3s ease;
-		&::before, &::after {
-			content: '';
-			display: block;
-			position: absolute;
-			width: 5px;
-			height: 5px;
-			left: 9px;
-			transition: all .3s ease;
-			border-bottom: 2px solid $activeBlue;
-			border-right: 2px solid $activeBlue;
-			border-radius: 2px;
-			transform: rotate(45deg) translate(1px, 1px);
-		}
-		&::after {
-			bottom: 7px;
-		}
-		&:hover {
-			color: lighten($textBlack, 30%);
-			text-shadow: 1px 1px 2px black;
-			&::before, &::after {
-				border-color: darken($activeBlue, 20%);
-			}
-		}
+		@extend %more;
 		&-active {
 			&::before, &::after {
 				transform: rotate(225deg) translate(-3px, -3px);

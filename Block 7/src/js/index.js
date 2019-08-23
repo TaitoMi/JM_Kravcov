@@ -37,9 +37,39 @@ for (let i = 0; i < tabsLink.length; i++) {
 	})
 }
 
+let linkMore = function(item1, className1, item2, className2) {
+	item1.addEventListener('click', (e) => {
+		e.preventDefault();
+		e.target.classList.toggle(`${className1}-active`);
+		item2.classList.toggle(`${className2}-active`)
+	})
+}
+
 moreLink.forEach((el, i) => {
-	el.addEventListener('click', () => {
+	el.addEventListener('click', (e) => {
+		e.preventDefault();
 		feedbackText[i].classList.toggle('feedback__text-active');
 		el.classList.toggle('feedback__more-active');
 	})
 })
+
+const brandsMore = document.querySelector('.brands__more');
+const brandsContent = document.querySelector('.brands__items');
+
+linkMore(brandsMore, 'brands__more', brandsContent, 'brands__items');
+
+const repairMore = document.querySelector('.repair__more');
+const repairContent = document.querySelector('.repair__items');
+
+linkMore(repairMore, 'repair__more', repairContent, 'repair__items');
+
+if (window.innerWidth <= 668) {
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+}
