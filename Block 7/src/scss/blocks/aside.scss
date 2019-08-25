@@ -7,6 +7,7 @@
 		position: relative;
 		padding-left: 15px;		
 		height: 100%;
+		transition: all .5s ease;
 		&::before {
 			content: '';
 			display: block;
@@ -16,12 +17,15 @@
 			background-color: $blue;
 			height: 100%;
 			z-index: 2;
-		} 
+		}
 	}
 	&__right {
 		box-sizing: border-box;
 		width: 79vw;
 		background: $bgColor;
+		@media screen and (max-width: 997px) {
+			width: auto;
+		}
 	}
 }
 
@@ -78,7 +82,7 @@
 		}
 	}
 }
-.sidebar-active {
+.sidebar-input-active {
 	.sidebar {
 		&__logo {
 			display: none;

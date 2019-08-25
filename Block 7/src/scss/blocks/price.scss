@@ -2,6 +2,9 @@
 	padding-bottom: 57px;
 	&__title {
 		@extend %title;
+		@media screen and (max-width: 769px) {
+			margin-top: 20px;
+		}
 	}
 	&__table {
 		font-family: $medium;
@@ -15,6 +18,9 @@
 		line-height: 20px;
 		margin-top: 35px;
 		margin-bottom: 19px;
+		@media screen and (max-width: 769px) {
+			margin-top: 15px;
+		}
 	}
 	&__get-offer {
 		margin-left: 32px;
@@ -25,26 +31,60 @@
 	padding-left: 32px;
 	box-sizing: border-box;
 	width: 74.5vw;
+	@media screen and (max-width: 997px) {
+		width: 95vw;
+	}
+	@media screen and (max-width: 600px) {
+		padding-left: 16px;
+	}
 	&__rows {
 		list-style-type: none;		
 		background-color: #fff;
 		padding: 0 24px;
 		border-radius: 6px;
+		flex-wrap: wrap;
+		@media screen and (max-width: 600px) {
+			flex-wrap: nowrap;
+			background-color: transparent;
+			padding-left: 0;
+			height: 280px;
+		}
 	}
 	&__head {
 		padding-left: 24px;
 		display: flex;
 		margin-top: 37px;
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
 		&-column {
 			display: block;
 			&-1 {				
 				width: 32.2vw;
+				@media screen and (max-width: 1439px) {
+					width: 29vw;
+				}
+				@media screen and (max-width: 997px) {
+					width: 35vw;
+				}
+				@media screen and (max-width: 769px) {
+					width: 30vw;
+				}
 			}
 			&-2 {
-				width: 15.5vw;
+				width: 15.6vw;
+				@media screen and (max-width: 1439px) {
+					width: 14vw;
+				}				
+				@media screen and (max-width: 997px) {
+					width: 18vw;
+				}
 			}
 			&-3 {
-				width: 21.3vw;
+				width: 13.1vw;
+				@media screen and (max-width: 1439px) {
+					width: 12vw;
+				}
 			}
 		}
 	}
@@ -54,18 +94,82 @@
 		height: 64px;
 		border-bottom: 1px solid #EAEAEA;
 		color: $textBlack;
+		@media screen and (max-width: 997px) {
+			width: 86vw;
+		}
+		@media screen and (max-width: 600px) {
+			width: 79vw;
+			height: 140px;	
+			flex-direction: column;	
+			align-items: flex-start;
+			justify-content: space-between;
+			padding-top: 36px;
+			border-radius: 6px;
+			margin-right: 80px;
+			background-color: #fff;
+			padding-left: 16px;
+			padding-bottom: 18px;
+		}
 		&:last-child {
 			border: none;
 		}
 		&-column {			
 			&-1 {				
-				width: 32.2vw;
+				width: 32.2vw;			
+				position: relative;	
+				@media screen and (max-width: 1439px) {
+					width: 29vw;
+				}
+				@media screen and (max-width: 997px) {
+					width: 35vw;
+				}
+				@media screen and (max-width: 769px) {
+					width: 30vw;
+				}
+				@media screen and (max-width: 600px) {
+					&::before {
+						content: 'Ремонтные услуги';
+						position: absolute;
+						top: -20px;
+						color: $textGray;
+					}
+				}
 			}
 			&-2 {
 				width: 15.6vw;
+				position: relative;
+				@media screen and (max-width: 1439px) {
+					width: 14vw;
+				}				
+				@media screen and (max-width: 997px) {
+					width: 18vw;
+				}
+				@media screen and (max-width: 600px) {
+					&::before {
+						content: 'Цена';
+						position: absolute;
+						top: -20px;
+						color: $textGray;
+					}
+				}
 			}
 			&-3 {
 				width: 13.1vw;
+				position: relative;
+				@media screen and (max-width: 1439px) {
+					width: 12vw;
+				}			
+				@media screen and (max-width: 997px) {
+					width: 19vw;
+				}
+				@media screen and (max-width: 600px) {
+					&::before {
+						content: 'Срок';
+						position: absolute;
+						top: -20px;
+						color: $textGray;
+					}
+				}
 			}
 			&-4 {
 				display: flex;
@@ -74,7 +178,7 @@
 				text-decoration: none;
 				text-transform: uppercase;
 				padding-left: 13px;
-				width: 7.2vw;
+				width: 114px;
 				font-family: $bold;
 				font-size: 12px;
 				color: #fff;
@@ -97,6 +201,11 @@
 				}
 				&:hover {
 					background-color: lighten($pink, 10%);
+				}
+				@media screen and (max-width: 600px) {
+					position: absolute;
+					right: 18px;
+					bottom: 18px;
 				}
 			}
 		}

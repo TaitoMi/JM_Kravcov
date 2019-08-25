@@ -36,8 +36,8 @@
 			</nav>
 			<footer class="sidebar__footer side-footer">
 				<div class="side-footer__links">
-					<a href="tel:88008908900" class="side-footer__btn side-footer__btn-phone"></a>
-					<a href="#" class="side-footer__btn side-footer__btn-chat"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-phone modal-call"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-chat modal-chat"></a>
 					<a href="#" class="side-footer__btn side-footer__btn-contacts"></a>
 				</div>
 				<a href="mailto:mail@cps.com" class="side-footer__email side-footer__link">mail@cps.com</a>
@@ -50,7 +50,19 @@
 			</footer>
 		</aside>
 		<div class="cols__right ">
-			<header class="mob-header"></header>
+			<header class="mob-header">
+				<a href="#" class="mob-header__menu-btn"><span class="mob-header__menu-btn--lines"></span></a>
+				<div class="mob-header__items">
+					<a href="" class="mob-header__logo"><img class="mob-header__logo-img" src="img/logo.svg" alt="Logo CPS"></a>
+					<div class="mob-header__buttons">
+						<a href="#" class="mob-header__btn mob-header__btn-call modal-call"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-chat modal-chat"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-contacts"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-settings"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-repair"></a>
+					</div>
+				</div>
+			</header>
 			<section class="service">
 				<header class="service__header">
 					<h1 class="service__title">Услуги и сервисы</h1>
@@ -178,20 +190,23 @@
 			</section>
 			<section class="repair">
 				<h2 class="repair__title">Ремонт различных видов техники</h2>		
-				<div class="repair__items">
-					<a href="#" class="repair__item">Ремонт ноутбуков<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт планшетов<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт ПК<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт мониторов<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт ноутбуков1<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт планшетов1<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт ПК1<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт мониторов1<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт ноутбуков2<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт планшетов2<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт ПК2<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт мониторов2<span class="repair__item-arrow"></span></a>
-					<a href="#" class="repair__item">Ремонт мониторов3<span class="repair__item-arrow"></span></a>
+				<div class="swiper-container">
+					<div class="repair__items swiper-wrapper">
+						<a href="#" class="repair__item swiper-slide">Ремонт ноутбуков<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт планшетов<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт ПК<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт мониторов<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт ноутбуков1<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт планшетов1<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт ПК1<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт мониторов1<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт ноутбуков2<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт планшетов2<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт ПК2<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт мониторов2<span class="repair__item-arrow"></span></a>
+						<a href="#" class="repair__item swiper-slide">Ремонт мониторов3<span class="repair__item-arrow"></span></a>
+					</div>
+					<div class="swiper-pagination"></div>
 				</div>		
 				<a href="#" class="repair__more">Показать все</a>
 			</section>
@@ -203,38 +218,41 @@
 						<span class="table__head-column table__head-column-2">Цена</span>
 						<span class="table__head-column table__head-column-3">Срок</span>
 					</div>
-					<ul class="table__rows">
-						<li class="table__row">
-							<span class="table__row-column-1">Диагностика</span>
-							<span class="table__row-column-2">Бесплатно</span>
-							<span class="table__row-column-3">30 мин</span>
-							<a href="#" class="table__row-column-4">Заказать</a>
-						</li>
-						<li class="table__row">
-							<span class="table__row-column-1">Замена дисплея</span>
-							<span class="table__row-column-2">1000 ₽</span>
-							<span class="table__row-column-3">30-120 мин</span>
-							<a href="#" class="table__row-column-4">Заказать</a>
-						</li>
-						<li class="table__row">
-							<span class="table__row-column-1">Замена полифонического динамика</span>
-							<span class="table__row-column-2">1000 ₽</span>
-							<span class="table__row-column-3">30-120 мин</span>
-							<a href="#" class="table__row-column-4">Заказать</a>
-						</li>
-						<li class="table__row">
-							<span class="table__row-column-1">Тестирование с выдачей технического заключения</span>
-							<span class="table__row-column-2">1000 ₽</span>
-							<span class="table__row-column-3">30-120 мин</span>
-							<a href="#" class="table__row-column-4">Заказать</a>
-						</li>
-						<li class="table__row">
-							<span class="table__row-column-1">Заменя программного обеспечения</span>
-							<span class="table__row-column-2">1000 ₽</span>
-							<span class="table__row-column-3">30-120 мин</span>
-							<a href="#" class="table__row-column-4">Заказать</a>
-						</li>
-					</ul>
+					<div class="swiper-container">
+						<ul class="table__rows swiper-wrapper">
+							<li class="swiper-slide table__row">
+								<span class="table__row-column-1">Диагностика</span>
+								<span class="table__row-column-2">Бесплатно</span>
+								<span class="table__row-column-3">30 мин</span>
+								<a href="#" class="table__row-column-4">Заказать</a>
+							</li>
+							<li class="swiper-slide table__row">
+								<span class="table__row-column-1">Замена дисплея</span>
+								<span class="table__row-column-2">1000 ₽</span>
+								<span class="table__row-column-3">30-120 мин</span>
+								<a href="#" class="table__row-column-4">Заказать</a>
+							</li>
+							<li class="swiper-slide table__row">
+								<span class="table__row-column-1">Замена полифонического динамика</span>
+								<span class="table__row-column-2">1000 ₽</span>
+								<span class="table__row-column-3">30-120 мин</span>
+								<a href="#" class="table__row-column-4">Заказать</a>
+							</li>
+							<li class="swiper-slide table__row">
+								<span class="table__row-column-1">Тестирование с выдачей технического заключения</span>
+								<span class="table__row-column-2">1000 ₽</span>
+								<span class="table__row-column-3">30-120 мин</span>
+								<a href="#" class="table__row-column-4">Заказать</a>
+							</li>
+							<li class="swiper-slide table__row">
+								<span class="table__row-column-1">Заменя программного обеспечения</span>
+								<span class="table__row-column-2">1000 ₽</span>
+								<span class="table__row-column-3">30-120 мин</span>
+								<a href="#" class="table__row-column-4">Заказать</a>
+							</li>
+						</ul>						
+    				<div class="swiper-pagination"></div>
+					</div>
 				</div>
 				<p class="price__description">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
 				<a href="#" class="price__get-offer">Получить коммерческое предложение</a>
@@ -274,6 +292,28 @@
 			</footer>
 		</div>
 	</div>
+	<form class="m-feedback modal">
+		<a href="#" class="m-feedback__close-btn modal__close-btn"></a>
+		<h1 class="m-feedback__title">Обратная связь</h1>
+		<input type="text" placeholder="Имя" class="modal__input m-feedback__name">
+		<input type="phone" placeholder="Телефон" class="modal__input m-feedback__name">
+		<input type="email" placeholder="Электронная почта" class="modal__input m-feedback__name">
+		<textarea placeholder="Сообщение" class="m-feedback__message"></textarea>
+		<p class="m-feedback__accept">
+				Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a>
+		</p>
+		<button class="modal__submit">Отправить</button>
+	</form>
+	<form class="modal m-call">
+		<a href="#" class="m-call__close-btn modal__close-btn"></a>
+		<h1 class="modal__title">Заказать звонок</h1>
+		<input type="phone" placeholder="Телефон" class="modal__input m-call__name">
+		<p class="m-call__accept">
+				Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="modal__link">политикой конфиденциальности</a>
+		</p>
+		<button class="modal__submit">Отправить</button>
+	</form>
+	<div class="overlay"></div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=<a0dd1adb-610b-460c-8764-668616ef8645>&lang=ru_RU" type="text/javascript">
 	</script>

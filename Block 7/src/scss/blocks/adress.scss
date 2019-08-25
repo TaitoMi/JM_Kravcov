@@ -1,10 +1,14 @@
 .adress {
 	&__title {
 		@extend %title;
+		@media screen and (max-width: 769px) {
+			margin-top: 17px;
+		}
 	}
 	&__partners {
 		position: relative;
 		margin-top: 38px;
+		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 	}
@@ -19,6 +23,10 @@
 		box-sizing: border-box;
 		margin: 28px 48px 0 32px;
 		border-radius: 6px;
+		@media screen and (max-width: 769px) {
+			margin: 0;
+		}
+		
 	}
 	&__description {
 		display: flex;
@@ -27,6 +35,9 @@
 		font-size: 14px;
 		font-family: $reg;
 		flex-wrap: wrap;
+		@media screen and (max-width: 997px) {
+			width: 100vw;
+		}
 	}
 }
 
@@ -35,5 +46,11 @@
 		width: 36vw;
 		line-height: 20px;
 		margin: 25px 16px 0 16px;
+		@media screen and (max-width: 997px) {
+			width: 45vw;
+		}
+		@media screen and (max-width: 600px) {
+			width: 93vw;
+		}
 	}
 }

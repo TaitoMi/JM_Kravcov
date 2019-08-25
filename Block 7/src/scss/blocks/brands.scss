@@ -1,5 +1,8 @@
 .brands {
 	box-sizing: border-box;
+	@media screen and (max-width: 997px) {
+		width: 98vw;
+	}
 	&__title {
 		@extend %title;
 	}
@@ -10,6 +13,13 @@
 		flex-wrap: wrap;
 		height: 185px;
 		transition: all .3s ease;
+		@media screen and (max-width: 997px) {
+			height: 165px;
+		}
+		@media screen and (max-width: 600px) {
+			height: 120px;
+			flex-wrap: nowrap;
+		}
 		&-active {
 			height: auto;
 		}
@@ -35,6 +45,14 @@
 			.brands__item-arrow {
 				box-shadow: 0px 0px 5px 1px $pink;
 			}
+		}		
+		@media screen and (max-width: 997px) {
+			margin-top: 3px;
+			margin-left: 8px;
+			width: 220px;
+		}
+		@media screen and (max-width: 600px) {
+			width: 58vw;
 		}
 	}
 	&__logo {
@@ -42,11 +60,29 @@
 		margin-left: 20px;
 	}
 	&__more {
-		@extend %more;
+		@extend %more;		
+		@media screen and (max-width: 997px) {
+			margin-top: 20px;
+			margin-left: 21px;
+		}
 		&-active {
 			&::before, &::after {
 				transform: rotate(225deg) translate(-3px, -3px);
 			}
 		}
+		@media screen and (max-width: 600px) {
+			display: none;
+		}
 	}
 }
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+	background-color: #DDDDDD;
+	border-radius: 50%;
+	&-active {
+		background-color: #B5B6BC;
+	}
+}
+

@@ -1,0 +1,164 @@
+.overlay {
+	display: none;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255,255,255, .9);
+	z-index: 5;
+	&-active {
+		display: block;
+	}
+}
+
+.sidebar {	
+	@media screen and (max-width: 997px) {
+		position: fixed;
+		left: -120vw;
+	}
+	&-active {
+		width: 30vw;
+		left: 0;
+		z-index: 10;
+		box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+		.sidebar {
+			&__header {
+				justify-content: flex-end;
+				box-sizing: border-box;
+				@media screen and (max-width: 600px) {
+					width: 94%;
+				}
+			}
+		}
+		@media screen and (max-width: 769px) {
+			width: 60vw;
+			.nav__link {
+				padding-left: 35px;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			width: 100vw;
+		}
+	}
+}
+
+.mob-header__menu-btn {
+	position: absolute;
+	z-index: 15;
+	&-active {
+		.mob-header__menu-btn--lines {
+			height: 0;
+			&::before {
+				width: 18px;
+				transform: rotate(45deg);
+			}
+			&::after {
+				width: 18px;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}
+
+.m-feedback {
+	transition: all .3s ease;
+	right: -120vw;
+	&-active {
+		right: 0;
+	}
+	&__message {		
+		width: 100%;
+		border: 1px solid #eaeaea;
+		border-radius: 8px;
+		padding: 12px 16px;
+		color: $textGray;
+		font-size: 16px;
+		margin: 8px 0;
+		height: 120px;
+	}
+	
+}
+
+.modal {	
+	display: flex;
+	flex-direction: column;
+	z-index: 15;
+	position: fixed;
+	width: 35vw;
+	padding: 32px;
+	padding-right: 64px;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+	&__link {
+		text-decoration: none;
+		color: $pink;
+		font-size: 14px;
+		font-family: $reg;
+	}
+	&__title {
+		font-size: 24px;
+		font-family: $bold;
+		color: $textBlack;
+	}
+	&__input {
+		width: 100%;
+		border: 1px solid #eaeaea;
+		border-radius: 8px;
+		padding: 12px 16px;
+		color: $textGray;
+		font-size: 16px;
+		margin: 8px 0;
+	}
+	&__submit {
+		@extend %btn-arrow;
+		background-color: $pink;
+		border-radius: 50px;
+		width: 140px;
+		color: #fff;
+		font-size: 12px;
+		font-family: $bold;
+		text-transform: uppercase;
+		text-align: left;
+		padding-left: 15px;
+		align-self: flex-end;
+		margin-top: 20px;
+		&::after {
+			border-color: #fff;
+			position: absolute;
+			left: auto;
+			right: 15px;
+		}
+	}
+	&__close-btn {
+		display: block;
+		position: absolute;
+		@extend %btn;
+		left: -64px;
+		&::before, &::after {
+			content: '';
+			position: absolute;
+			height: 2px;
+			width: 18px;
+			background-color: #fff;
+			top: 50%;
+			left: 50%;
+		}
+		&::before {
+			transform: translate(-50%,-50%) rotate(45deg);
+		}
+		&::after {
+			transform: translate(-50%,-50%) rotate(-45deg);
+		}
+	}
+}
+.m-call {	
+	transition: all .3s ease;
+	right: -120vw;
+	&-active {
+		right: 0;
+	}
+}
