@@ -3,11 +3,13 @@
 	justify-content: space-between;
 	padding: 0 48px 32px 32px;
 	color: $textGray;
-	font-family: $reg;
+	font-weight: 400;
 	font-size: 14px;
 	margin-top: 83px;
 	&__copyrights {
-		text-align: left;		
+		text-align: left;	
+		display: flex;
+		flex-direction: column;	
 		@media screen and (max-width: 600px) {
 			text-align: center;
 			margin-bottom: 18px;
@@ -15,9 +17,11 @@
 	}
 	&__information {
 		text-align: right;
+		width: 24%;
 		@media screen and (max-width: 600px) {
 			text-align: center;
 			margin-top: 18px;
+			width: 100%;
 		}
 	}
 	@media screen and (max-width: 997px) {

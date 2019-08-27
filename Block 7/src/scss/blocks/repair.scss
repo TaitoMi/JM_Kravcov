@@ -1,14 +1,6 @@
 .repair {
-	padding-bottom: 20px;
 	&__title {
 		@extend %title;
-		margin-top: 58px;
-		@media screen and (max-width: 769px) {
-			margin-top: 44px;
-		}
-		@media screen and (max-width: 600px) {
-			margin-top: 10px;
-		}
 	}
 	&__items {
 		display: flex;
@@ -37,17 +29,10 @@
 		}
 	}
 	&__item {
-		display: block;
 		color: $textBlack;
-		border: 1px solid #EAEAEA;
-		box-sizing: border-box;
-		border-radius: 6px;
-		width: 240px;
 		height: 160px;
 		text-decoration: none;
-		background-color: #fff;
 		padding: 18px;
-		margin: 8px 16px; 
 		position: relative;
 		&-arrow {
 			position: absolute;
@@ -61,15 +46,11 @@
 		@media screen and (max-width: 997px) {
 			margin-top: 3px;
 			margin-left: 8px;
-			width: 220px;
-		}
-		@media screen and (max-width: 600px) {
-			width: 62vw;
 		}
 	}
 	&__more {
 		color: $textBlack;
-		font-family: $medium;
+		font-weight: 500;
 		font-size: 16px;
 		@extend %more;
 		@media screen and (max-width: 769px) {

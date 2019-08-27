@@ -12,8 +12,9 @@
 	}
 	&__title {
 		margin: 0;
-		font-family: $bold;
+		font-weight: 700;
 		padding-left: 35px;
+		padding-right: 35px;
 		font-size: 28px;
 		line-height: 48px;
 		color: $textBlack;
@@ -23,6 +24,7 @@
 		letter-spacing: -.7px;
 		@media screen and (max-width: 997px) {
 			padding-left: 21px;
+			padding-right: 21px;
 		}
 	}
 	&__buttons {
@@ -32,7 +34,7 @@
 	&__link {
 		text-decoration: none;
 		color: $textBlack;
-		font-family: $medium;
+		font-weight: 500;
 		font-size: 16px;
 		display: flex;
 		align-items: center;
@@ -64,17 +66,20 @@
 	}
 	&__tabs {
 		padding-left: 35px;
+		padding-right: 35px;
 		@media screen and (max-width: 600px) {
 			padding-left: 16px;
+			padding-right: 16px;
 		}
 	}
 }
 
 .tabs {
-	font-family: $reg;
+	font-weight: 400;
 	margin-top: 5px;
 	@media screen and (max-width: 997px) {
 		padding-left: 23px;
+		padding-right: 23px;
 		margin-top: 25px;
 	}
 	@media screen and (max-width: 600px) {
@@ -87,7 +92,7 @@
 		list-style-type: none;
 		display: flex;
 		flex-wrap: wrap;
-		width: 100vw;
+		// width: 100vw;
 		@media screen and (max-width: 769px) {
 			flex-wrap: nowrap;
 			overflow-x: scroll;
@@ -127,7 +132,7 @@
 		display: none;		
 		&-active {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			@media screen and (max-width: 600px) {
 				align-items: flex-start;
 			}
@@ -140,7 +145,7 @@
 	&__text-block {
 		font-size: 14px;
 		line-height: 20px;
-		width: 34.6vw;
+		width: 50%;
 		display: block;
 		@media screen and (max-width: 997px) {
 			width: 44vw;
@@ -160,6 +165,9 @@
 		}		
 		@media screen and (max-width: 997px) {
 			height: 140px;
+		}
+		@media screen and (max-width: 769px) {
+			height: 185px;
 		}
 		&-active {
 			height: auto;
@@ -181,7 +189,7 @@
 		display: block;
 		border-radius: 7px;
 		margin-left: 15px;
-		width: 36.5vw;
+		width: 50%;
 		object-fit: contain;
 		@media screen and (max-width: 997px) {
 			width: 48vw;
@@ -199,10 +207,12 @@
 	background-color: #fff;
 	height: 88px;
 	box-sizing: border-box;
-	padding: 23px;
+	padding: 23px 32px;
 	width: 100vw;
-	padding-left: 32px;
 	transition: all .3s ease;
+	@media screen and (max-width: 600px) {
+		padding: 23px 10px;
+	}
 	&__menu-btn {
 		@extend %btn;
 		position: relative;
@@ -333,5 +343,47 @@
 	@media screen and (max-width: 600px) {
 		display: flex;
 		justify-content: center;
+	}
+}
+.links {
+	&__item {
+		@extend %btn;
+	}
+	&__arrow {
+		display: flex;
+		justify-content: space-between;
+		margin: 8px 16px;
+		width: 240px;
+		background-color: #fff;
+		border: 1px solid #EAEAEA;
+		border-radius: 6px;
+		transition: all .3s ease;
+		&-ar {
+			@extend %btn-arrow;
+			margin-right: 18px;
+			transition: all .3s ease;
+		}
+		&:hover {
+			box-shadow: 0px 0px 5px 1px $pink;
+			.links__arrow-ar {
+				box-shadow: 0px 0px 5px 1px $pink;
+			}
+		}		
+		@media screen and (max-width: 997px) {
+			margin-top: 3px;
+			margin-left: 8px;
+			width: 220px;
+		}
+		@media screen and (max-width: 600px) {
+			width: 58vw;
+		}
+	}
+	&__more {
+
+	}
+}
+.block {
+	&__title {
+		margin-top: 50px;
 	}
 }

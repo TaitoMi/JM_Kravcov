@@ -1,13 +1,9 @@
 .price {
-	padding-bottom: 57px;
 	&__title {
 		@extend %title;
-		@media screen and (max-width: 769px) {
-			margin-top: 20px;
-		}
 	}
 	&__table {
-		font-family: $medium;
+		font-weight: 500;
 		font-size: 14px;
 	}
 	&__description {
@@ -20,39 +16,46 @@
 		margin-bottom: 19px;
 		@media screen and (max-width: 769px) {
 			margin-top: 15px;
+			width: auto;
+		}
+		@media screen and (max-width: 600px) {
+			margin: 0;
+			padding: 0 16px;
 		}
 	}
 	&__get-offer {
 		margin-left: 32px;
 		@extend %link;
+		@media screen and (max-width: 600px) {
+			margin: 0;
+			display: block;
+			padding: 0 16px;
+		}
 	} 
 }
 .table {
-	padding-left: 32px;
-	box-sizing: border-box;
-	width: 74.5vw;
-	@media screen and (max-width: 997px) {
-		width: 95vw;
-	}
+	padding: 0 32px;
+	width: 100%;
 	@media screen and (max-width: 600px) {
-		padding-left: 16px;
+		padding: 0 16px;
 	}
 	&__rows {
 		list-style-type: none;		
 		background-color: #fff;
-		padding: 0 24px;
 		border-radius: 6px;
 		flex-wrap: wrap;
+		padding: 0;
 		@media screen and (max-width: 600px) {
 			flex-wrap: nowrap;
 			background-color: transparent;
 			padding-left: 0;
-			height: 280px;
+			height: 212px;
 		}
 	}
 	&__head {
 		padding-left: 24px;
 		display: flex;
+		width: 100%;
 		margin-top: 37px;
 		@media screen and (max-width: 600px) {
 			display: none;
@@ -60,7 +63,7 @@
 		&-column {
 			display: block;
 			&-1 {				
-				width: 32.2vw;
+				width: 42.5%;
 				@media screen and (max-width: 1439px) {
 					width: 29vw;
 				}
@@ -72,7 +75,7 @@
 				}
 			}
 			&-2 {
-				width: 15.6vw;
+				width: 20%;
 				@media screen and (max-width: 1439px) {
 					width: 14vw;
 				}				
@@ -94,12 +97,10 @@
 		height: 64px;
 		border-bottom: 1px solid #EAEAEA;
 		color: $textBlack;
-		@media screen and (max-width: 997px) {
-			width: 86vw;
-		}
+		padding: 0 24px;
+		position: relative;
 		@media screen and (max-width: 600px) {
-			width: 79vw;
-			height: 140px;	
+			height: 190px;	
 			flex-direction: column;	
 			align-items: flex-start;
 			justify-content: space-between;
@@ -115,7 +116,7 @@
 		}
 		&-column {			
 			&-1 {				
-				width: 32.2vw;			
+				width: 43.5%;
 				position: relative;	
 				@media screen and (max-width: 1439px) {
 					width: 29vw;
@@ -127,16 +128,19 @@
 					width: 30vw;
 				}
 				@media screen and (max-width: 600px) {
+					width: 100%;
 					&::before {
 						content: 'Ремонтные услуги';
-						position: absolute;
+						// position: absolute;
 						top: -20px;
+						display: flex;
+						flex-direction: column;
 						color: $textGray;
 					}
 				}
 			}
 			&-2 {
-				width: 15.6vw;
+				width: 20.5%;
 				position: relative;
 				@media screen and (max-width: 1439px) {
 					width: 14vw;
@@ -145,10 +149,13 @@
 					width: 18vw;
 				}
 				@media screen and (max-width: 600px) {
+					width: 100%;
 					&::before {
 						content: 'Цена';
-						position: absolute;
+						// position: absolute;
 						top: -20px;
+						display: flex;
+						flex-direction: column;
 						color: $textGray;
 					}
 				}
@@ -163,9 +170,12 @@
 					width: 19vw;
 				}
 				@media screen and (max-width: 600px) {
+					width: 100%;
 					&::before {
 						content: 'Срок';
-						position: absolute;
+						// position: absolute;
+						display: flex;
+						flex-direction: column;
 						top: -20px;
 						color: $textGray;
 					}
@@ -179,12 +189,13 @@
 				text-transform: uppercase;
 				padding-left: 13px;
 				width: 114px;
-				font-family: $bold;
+				font-weight: 700;
 				font-size: 12px;
 				color: #fff;
 				@extend %btn;
 				border-radius: 50px;
-				position: relative;
+				position: absolute;
+				right: 32px;
 				transition: all .3s ease;
 				&::after {
 					content: '';

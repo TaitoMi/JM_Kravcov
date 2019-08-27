@@ -9,12 +9,18 @@
 @import "./blocks/footer";
 @import "./blocks/modals";
 
-
+* {
+	box-sizing: border-box;
+}
 
 body {
   margin: 0;
   font-family: $medium;
 	color: $textGray;
 	display: flex;
-	overflow-x: hidden;
+	justify-content: center;
+	overflow-x: hidden;	
+}
+.overflow {
+	overflow: hidden;
 }

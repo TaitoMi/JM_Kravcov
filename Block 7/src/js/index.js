@@ -3,6 +3,7 @@ import '../scss/style.scss';
 const searchBtn = document.querySelector('.search__btn');
 const sidebar = document.querySelector('.sidebar');
 const searchResetBtn = document.querySelector('.search__reset');
+const body = document.querySelector('body');
 
 searchBtn.addEventListener('click', () => {
 	sidebar.classList.add('sidebar-input-active');
@@ -69,12 +70,15 @@ const mobSidebar = document.querySelector('.sidebar');
 const overlay = document.querySelector('.overlay');
 
 mobMenuBtn.addEventListener('click', () => {
+	removeActive();
+	body.classList.toggle('overflow');
 	mobSidebar.classList.toggle('sidebar-active');
 	mobMenuBtn.classList.toggle('mob-header__menu-btn-active');
 	overlay.classList.toggle('overlay-active');
 })
 
 function removeActive() {	
+	body.classList.remove('overflow');
 	mobSidebar.classList.remove('sidebar-active');
 	mobMenuBtn.classList.remove('mob-header__menu-btn-active');
 	overlay.classList.remove('overlay-active');
@@ -88,6 +92,8 @@ overlay.addEventListener('click', () => {
 
 function modalsShow(link, content, contentClassName) {
 	link.addEventListener('click', () => {
+		removeActive();		
+		body.classList.toggle('overflow');
 		content.classList.toggle(`${contentClassName}-active`)
 		overlay.classList.toggle('overlay-active')
 	})
@@ -116,6 +122,10 @@ for (let i = 0; i < modalCloseBtn.length; i++) {
 	})
 }
 
+const mobMenuCloseBtn = document.querySelector('.mob-header__close-btn');
+mobMenuCloseBtn.addEventListener('click', () => {
+	removeActive();
+})
 
 if (window.innerWidth <= 600) {
 	var swiper = new Swiper('.swiper-container', {

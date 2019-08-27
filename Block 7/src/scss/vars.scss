@@ -6,26 +6,26 @@ $activeBlue: #41F6D7;
 $blue: #B8FFEC;
 
 @font-face {
-  font-family: 'Lakes-Bold';
+  font-family: 'Lakes';
   src: url('../fonts/TTLakes-Bold.woff') format('woff');
   font-weight: 700;
 }
 
 @font-face {
-  font-family: 'Lakes-Medium';
+  font-family: 'Lakes';
   src: url('../fonts/TTLakes-Medium.woff') format('woff');
-  font-weight: normal;
+  font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Lakes-Regular';
+  font-family: 'Lakes';
   src: url('../fonts/TTLakes-Regular.woff') format('woff');
   font-weight: normal;
 }
 
-$bold: 'Lakes-Bold', sans-serif;
-$reg: 'Lakes-Regular', sans-serif;
-$medium: 'Lakes-Medium', sans-serif;
+$bold: 'Lakes', sans-serif;
+$reg: 'Lakes', sans-serif;
+$medium: 'Lakes', sans-serif;
 
 %link {
 	color: $textBlack;
@@ -103,7 +103,6 @@ $medium: 'Lakes-Medium', sans-serif;
 	text-transform: uppercase;
 	font-size: 16px;
 	font-family: $reg;
-	margin-top: 44px;
 	background: linear-gradient(45deg, $bgColor 0%, #FFFFFF 98.61%);
 }
 
