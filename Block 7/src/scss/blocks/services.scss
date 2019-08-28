@@ -287,14 +287,7 @@
 	&__btn {
 		@extend %btn;
 		margin-left: 16px;
-		&-call {
-			background: $pink url('../img/i-call.svg') no-repeat center;
-		}
-		&-chat {
-			background: $pink url('../img/i-chat.svg') no-repeat center;
-		}
 		&-contacts {
-			background: $pink url('../img/i-contacts.svg') no-repeat center;
 			margin-right: 26px;
 			position: relative;
 			&::after {
@@ -308,12 +301,6 @@
 				right: -20px;
 			}
 		}
-		&-settings {
-			background: $pink url('../img/i-request.svg') no-repeat center;
-		}
-		&-repair {
-			background: $pink url('../img/i-status.svg') no-repeat center;
-		}		
 		@media screen and (max-width: 600px) {
 			&-call, &-chat, &-contacts {
 				display: none;
@@ -348,6 +335,25 @@
 .links {
 	&__item {
 		@extend %btn;
+		&-phone {
+			background: $pink url('../img/i-call.svg') no-repeat center;
+		}
+		&-chat {
+			background: $pink url('../img/i-chat.svg') no-repeat center;
+		}
+		&-contacts {
+			background: $pink url('../img/i-contacts.svg') no-repeat center;
+		}
+		&-settings {
+			background: $pink url('../img/i-request.svg') no-repeat center;
+		}
+		&-repair {
+			background: $pink url('../img/i-status.svg') no-repeat center;
+		}	
+			
+		&:hover {
+			background-color: lighten($pink, 10%);
+		}
 	}
 	&__arrow {
 		display: flex;
@@ -378,8 +384,43 @@
 			width: 58vw;
 		}
 	}
-	&__more {
-
+	&__order {
+		display: flex;
+				height: 34px;
+				align-items: center;
+				text-decoration: none;
+				text-transform: uppercase;
+				padding-left: 13px;
+				width: 114px;
+				font-weight: 700;
+				font-size: 12px;
+				color: #fff;
+				@extend %btn;
+				border-radius: 50px;
+				position: absolute;
+				right: 32px;
+				transition: all .3s ease;
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					width: 7px;
+					height: 7px;
+					border-bottom: 3px solid #fff;
+					border-right: 3px solid #fff;
+					border-radius: 3px;
+					right: 15px;
+					top: 50%;
+					transform: translateY(-50%) rotate(-45deg);
+				}
+				&:hover {
+					background-color: lighten($pink, 10%);
+				}
+				@media screen and (max-width: 600px) {
+					position: absolute;
+					right: 18px;
+					bottom: 18px;
+				}
 	}
 }
 .block {

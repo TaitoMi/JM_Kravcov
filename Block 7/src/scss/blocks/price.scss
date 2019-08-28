@@ -173,50 +173,11 @@
 					width: 100%;
 					&::before {
 						content: 'Срок';
-						// position: absolute;
 						display: flex;
 						flex-direction: column;
 						top: -20px;
 						color: $textGray;
 					}
-				}
-			}
-			&-4 {
-				display: flex;
-				height: 34px;
-				align-items: center;
-				text-decoration: none;
-				text-transform: uppercase;
-				padding-left: 13px;
-				width: 114px;
-				font-weight: 700;
-				font-size: 12px;
-				color: #fff;
-				@extend %btn;
-				border-radius: 50px;
-				position: absolute;
-				right: 32px;
-				transition: all .3s ease;
-				&::after {
-					content: '';
-					display: block;
-					position: absolute;
-					width: 7px;
-					height: 7px;
-					border-bottom: 3px solid #fff;
-					border-right: 3px solid #fff;
-					border-radius: 3px;
-					right: 15px;
-					top: 50%;
-					transform: translateY(-50%) rotate(-45deg);
-				}
-				&:hover {
-					background-color: lighten($pink, 10%);
-				}
-				@media screen and (max-width: 600px) {
-					position: absolute;
-					right: 18px;
-					bottom: 18px;
 				}
 			}
 		}

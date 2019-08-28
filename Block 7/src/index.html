@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
-		<link rel="stylesheet" href="style.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
@@ -37,9 +36,9 @@
 			</nav>
 			<div class="sidebar__footer side-footer">
 				<div class="side-footer__links links">
-					<a href="#" class="side-footer__btn side-footer__btn-phone modal-call links__item"></a>
-					<a href="#" class="side-footer__btn side-footer__btn-chat modal-chat links__item"></a>
-					<a href="#" class="side-footer__btn side-footer__btn-contacts links__item"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-phone modal-call links__item links__item-phone"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-chat modal-chat links__item links__item-chat"></a>
+					<a href="#" class="side-footer__btn side-footer__btn-contacts links__item links__item-contacts"></a>
 				</div>
 				<a href="mailto:mail@cps.com" class="side-footer__email side-footer__link">mail@cps.com</a>
 				<a href="tel:88008908900" class="side-footer__phone side-footer__link">8 800 890 8900</a>
@@ -58,11 +57,11 @@
 				<div class="mob-header__items">
 					<a href="" class="mob-header__logo"><img class="mob-header__logo-img" src="img/logo.svg" alt="Logo CPS"></a>
 					<div class="mob-header__buttons links">
-						<a href="#" class="mob-header__btn mob-header__btn-call modal-call links__item"></a>
-						<a href="#" class="mob-header__btn mob-header__btn-chat modal-chat links__item"></a>
-						<a href="#" class="mob-header__btn mob-header__btn-contacts links__item"></a>
-						<a href="#" class="mob-header__btn mob-header__btn-settings links__item"></a>
-						<a href="#" class="mob-header__btn mob-header__btn-repair links__item"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-call modal-call links__item links__item-phone"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-chat modal-chat links__item links__item-chat"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-contacts links__item links__item-contacts"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-settings links__item links__item-settings"></a>
+						<a href="#" class="mob-header__btn mob-header__btn-repair links__item links__item-repair"></a>
 					</div>
 				</div>
 			</div>
@@ -86,7 +85,7 @@
 					<section class="tabs__content">
 						<div class="tabs__feedback feedback">
 							<div class="feedback__content feedback__content-active">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 										<div class="feedback__text">
 												<p>
 														Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
@@ -100,11 +99,11 @@
 													</p>
 												</div>
 										<a href="#" class="feedback__more">Читать далее</a>
-								</article>								
+								</div>								
 								<img src="img/feedback-img1.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 							<div class="feedback__content">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 										<p class="feedback__text">
 											Это второй таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
 											Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -114,11 +113,11 @@
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi iusto expedita beatae, ducimus magni, earum debitis adipisci ipsa ut nobis dignissimos, quisquam accusamus illum consequatur doloremque? Ab consequatur debitis at vero porro sapiente molestiae, perspiciatis accusamus ea enim magnam, pariatur architecto eos. Vitae dolor ad quae, vero cumque repudiandae.
 										</p>
 										<a href="#" class="feedback__more">Читать далее</a>
-								</article>								
+								</div>								
 								<img src="img/feedback-img2.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 							<div class="feedback__content">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 									<p class="feedback__text">
 										Это третий таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
 										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -128,11 +127,11 @@
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi iusto expedita beatae, ducimus magni, earum debitis adipisci ipsa ut nobis dignissimos, quisquam accusamus illum consequatur doloremque? Ab consequatur debitis at vero porro sapiente molestiae, perspiciatis accusamus ea enim magnam, pariatur architecto eos. Vitae dolor ad quae, vero cumque repudiandae.
 									</p>
 									<a href="#" class="feedback__more">Читать далее</a>
-								</article>
+								</div>
 								<img src="img/feedback-img3.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 							<div class="feedback__content">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 									<p class="feedback__text">
 										Это четвертый таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
 										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -142,11 +141,11 @@
 										Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi iusto expedita beatae, ducimus magni, earum debitis adipisci ipsa ut nobis dignissimos, quisquam accusamus illum consequatur doloremque? Ab consequatur debitis at vero porro sapiente molestiae, perspiciatis accusamus ea enim magnam, pariatur architecto eos. Vitae dolor ad quae, vero cumque repudiandae.
 									</p>
 									<a href="#" class="feedback__more">Читать далее</a>
-								</article>
+								</div>
 								<img src="img/feedback-img4.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 							<div class="feedback__content">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 									<p class="feedback__text">
 										Это пятый таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
 										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -156,11 +155,11 @@
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea commodi iusto expedita beatae, ducimus magni, earum debitis adipisci ipsa ut nobis dignissimos, quisquam accusamus illum consequatur doloremque? Ab consequatur debitis at vero porro sapiente molestiae, perspiciatis accusamus ea enim magnam, pariatur architecto eos. Vitae dolor ad quae, vero cumque repudiandae.
 									</p>
 									<a href="#" class="feedback__more">Читать далее</a>
-								</article>
+								</div>
 								<img src="img/feedback-img5.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 							<div class="feedback__content">
-								<article class="feedback__text-block">
+								<div class="feedback__text-block">
 									<p class="feedback__text">
 										Это шестой таб авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя. <br> <br>
 										Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
@@ -168,7 +167,7 @@
 										Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias veniam dolore quam, facere laboriosam minus, sint corporis quod totam aliquid ipsum! Voluptates vel quidem dignissimos fuga, nam sed voluptate autem? Deleniti corrupti aliquid neque tempora ducimus sed corporis placeat ut eum voluptate eos, consequatur maxime quo autem, dicta inventore nihil?
 									</p>
 									<a href="#" class="feedback__more">Читать далее</a>
-								</article>
+								</div>
 								<img src="img/feedback-img6.jpg" alt="Компания CPS" class="feedback__img">
 							</div>
 						</div>						
@@ -219,7 +218,7 @@
 			</section>
 			<section class="price block">
 				<h2 class="price__title block__title">цены на услуги</h2>
-				<div class="price__table table">
+				<div class="price__table table links">
 					<div class="table__head">
 						<span class="table__head-column table__head-column-1">Ремонтные услуги</span>
 						<span class="table__head-column table__head-column-2">Цена</span>
@@ -231,31 +230,31 @@
 								<span class="table__row-column-1">Диагностика</span>
 								<span class="table__row-column-2">Бесплатно</span>
 								<span class="table__row-column-3">30 мин</span>
-								<a href="#" class="table__row-column-4">Заказать</a>
+								<a href="#" class="table__row-column-4 links__order">Заказать</a>
 							</li>
 							<li class="swiper-slide table__row">
 								<span class="table__row-column-1">Замена дисплея</span>
 								<span class="table__row-column-2">1000 ₽</span>
 								<span class="table__row-column-3">30-120 мин</span>
-								<a href="#" class="table__row-column-4">Заказать</a>
+								<a href="#" class="table__row-column-4 links__order">Заказать</a>
 							</li>
 							<li class="swiper-slide table__row">
 								<span class="table__row-column-1">Замена полифонического динамика</span>
 								<span class="table__row-column-2">1000 ₽</span>
 								<span class="table__row-column-3">30-120 мин</span>
-								<a href="#" class="table__row-column-4">Заказать</a>
+								<a href="#" class="table__row-column-4 links__order">Заказать</a>
 							</li>
 							<li class="swiper-slide table__row">
 								<span class="table__row-column-1">Тестирование с выдачей технического заключения</span>
 								<span class="table__row-column-2">1000 ₽</span>
 								<span class="table__row-column-3">30-120 мин</span>
-								<a href="#" class="table__row-column-4">Заказать</a>
+								<a href="#" class="table__row-column-4 links__order">Заказать</a>
 							</li>
 							<li class="swiper-slide table__row">
 								<span class="table__row-column-1">Заменя программного обеспечения</span>
 								<span class="table__row-column-2">1000 ₽</span>
 								<span class="table__row-column-3">30-120 мин</span>
-								<a href="#" class="table__row-column-4">Заказать</a>
+								<a href="#" class="table__row-column-4 links__order">Заказать</a>
 							</li>
 						</ul>						
     				<div class="swiper-pagination"></div>

@@ -194,18 +194,6 @@
 	&__btn {
 		margin-right: 18px;
 		transition: all .3s ease;
-		&-phone {
-			background: $pink url('../img/i-call.svg') no-repeat center;
-		}
-		&-chat {
-			background: $pink url('../img/i-chat.svg') no-repeat center;
-		}
-		&-contacts {
-			background: $pink url('../img/i-contacts.svg') no-repeat center;
-		}
-		&:hover {
-			background-color: lighten($pink, 10%);
-		}
 	}
 	&__link {
 		text-decoration: none;

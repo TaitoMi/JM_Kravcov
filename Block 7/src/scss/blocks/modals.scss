@@ -14,16 +14,17 @@
 	}
 }
 
+
 .sidebar {	
 	@media screen and (max-width: 997px) {
 		position: fixed;
-		left: -120vw;
+		transform: translateX(-120vw);
 		z-index: 10;
 	}
 	&-active {
 		width: 30vw;
 		max-width: 30vw;
-		left: 0;
+		transform: translateX(0vw);
 		padding-bottom: 50px;
 		overflow-y: scroll;
 		box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
