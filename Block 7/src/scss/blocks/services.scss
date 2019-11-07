@@ -334,7 +334,11 @@
 }
 .links {
 	&__item {
-		@extend %btn;
+		display: block;
+		background-color: $pink;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
 		&-phone {
 			background: $pink url('../img/i-call.svg') no-repeat center;
 		}
