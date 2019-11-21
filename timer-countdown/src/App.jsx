@@ -7,55 +7,51 @@ import CountDown from './components/CountDown';
 import './styles/app.scss';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isTimer: true,
-    };
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			isTimer: true,
+		};
+	}
 
-  toCountdown = () => {
-    let x = 12312;
-    const { isTimer } = this.state;
-    this.setState({ isTimer: !isTimer });
-  };
+	toCountdown = () => {
+		const { isTimer } = this.state;
+		this.setState({ isTimer: !isTimer });
+	};
 
-  countDown = () => {
-    return <h1>Countdown</h1>;
-  };
-
-  render() {
-    const { isTimer } = this.state;
-    const tabsContent = isTimer ? <Timer /> : <CountDown />;
-    return (
-      <div className="app">
-        <Tabs defaultActiveKey="1" onChange={this.toCountdown}>
-          <Tabs.TabPane
-            tab={
-              <span>
-                <Icon type="clock-circle" />
-                Timer
+	render() {
+		const { isTimer } = this.state;
+		return (
+			<div className="app">
+				<Tabs defaultActiveKey="1" onChange={this.toCountdown}>
+					<Tabs.TabPane
+						className="app__tab"
+						tab={
+							<span>
+								<Icon type="clock-circle" />
+								Timer
               </span>
-            }
-            key="1"
-          >
-            {tabsContent}
-          </Tabs.TabPane>
-          <Tabs.TabPane
-            tab={
-              <span>
-                <Icon type="dashboard" />
-                CountDown
+						}
+						key="1"
+					>
+						{isTimer && <Timer />}
+					</Tabs.TabPane>
+					<Tabs.TabPane
+						className="app__tab"
+						tab={
+							<span>
+								<Icon type="dashboard" />
+								CountDown
               </span>
-            }
-            key="2"
-          >
-            {tabsContent}
-          </Tabs.TabPane>
-        </Tabs>
-      </div>
-    );
-  }
+						}
+						key="2"
+					>
+						{!isTimer && <CountDown />}
+					</Tabs.TabPane>
+				</Tabs>
+			</div>
+		);
+	}
 }
 
 export default App;

@@ -6,9 +6,9 @@ class Timer extends React.Component {
     super(props);
     this.state = {
       playBtnIsActive: false,
-      minutes: 0,
-      seconds: 0,
-      miliseconds: 0,
+      minutes: '00',
+      seconds: '00',
+      miliseconds: '000',
     };
   }
 
@@ -18,46 +18,56 @@ class Timer extends React.Component {
 
   startTimer = e => {
     e.preventDefault();
-    const { playBtnIsActive } = this.state;
-    if (playBtnIsActive) {
-      this.setState({ playBtnIsActive: !playBtnIsActive });
-      clearInterval(this.timerId);
-      return;
-    }
-    this.setState({ playBtnIsActive: !playBtnIsActive });
-
-    this.timerId = setInterval(() => {
-      const { minutes, seconds, miliseconds } = this.state;
-      let newSec = seconds;
-      let newMs = miliseconds;
-      let newMins = minutes;
-      if (miliseconds >= 1000) {
-        newMs = 0;
-        newSec += 1;
-        if (newSec >= 60) {
-          newMins += 1;
-          newSec = 0;
-        }
-      } else {
-        newMs += 17;
+    requestAnimationFrame(() => {
+      const { playBtnIsActive } = this.state;
+      if (playBtnIsActive) {
+        this.setState({ playBtnIsActive: !playBtnIsActive });
+        clearInterval(this.timerId);
+        return;
       }
+      this.setState({ playBtnIsActive: !playBtnIsActive });
 
-      this.setState(state => {
-        return {
-          miliseconds: newMs,
-          seconds: newSec,
-          minutes: newMins,
-        };
-      });
-    }, 17);
+      this.timerId = setInterval(() => {
+        const { minutes, seconds, miliseconds } = this.state;
+        let newSec = seconds;
+        let newMs = miliseconds;
+        let newMins = minutes;
+        if (Number(miliseconds) >= 983) {
+          newMs = '000';
+          newSec = Number(newSec) < 9 ? `0${Number(newSec) + 1}` : `${Number(newSec) + 1}`;
+          if (newSec >= 60) {
+            newMins = Number(newMins) < 9 ? `0${Number(newMins) + 1}` : `${Number(newMins) + 1}`;
+            newSec = '00';
+          }
+        } else {
+          newMs = this.msConvert(Number(newMs));
+        }
+
+        this.setState(() => {
+          return {
+            miliseconds: newMs.slice(0, 3),
+            seconds: newSec,
+            minutes: newMins,
+          };
+        });
+      }, 17);
+    });
+  };
+
+  msConvert = ms => {
+    const msResult = ms + 17;
+    if (msResult > 9 && msResult < 100) {
+      return `0${msResult}`;
+    }
+    return `${msResult}`;
   };
 
   clean = () => {
     this.setState({
       playBtnIsActive: false,
-      minutes: 0,
-      seconds: 0,
-      miliseconds: 0,
+      minutes: '00',
+      seconds: '00',
+      miliseconds: '000',
     });
     clearInterval(this.timerId);
   };
