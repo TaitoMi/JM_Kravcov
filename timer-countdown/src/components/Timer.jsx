@@ -16,50 +16,53 @@ class Timer extends React.Component {
     this.clean();
   }
 
-  startTimer = e => {
-    e.preventDefault();
-    requestAnimationFrame(() => {
-      const { playBtnIsActive } = this.state;
-      if (playBtnIsActive) {
-        this.setState({ playBtnIsActive: !playBtnIsActive });
-        clearInterval(this.timerId);
-        return;
-      }
+  startTimer = event => {
+    event.preventDefault();
+    const { playBtnIsActive } = this.state;
+    if (playBtnIsActive) {
       this.setState({ playBtnIsActive: !playBtnIsActive });
+      cancelAnimationFrame(this.timerId);
+      return;
+    }
+    this.setState({ playBtnIsActive: !playBtnIsActive });
+    this.timerId = requestAnimationFrame(this.timer(Date.now()));
+  };
 
-      this.timerId = setInterval(() => {
-        const { minutes, seconds, miliseconds } = this.state;
-        let newSec = seconds;
-        let newMs = miliseconds;
-        let newMins = minutes;
-        if (Number(miliseconds) >= 983) {
-          newMs = '000';
-          newSec = Number(newSec) < 9 ? `0${Number(newSec) + 1}` : `${Number(newSec) + 1}`;
-          if (newSec >= 60) {
-            newMins = Number(newMins) < 9 ? `0${Number(newMins) + 1}` : `${Number(newMins) + 1}`;
-            newSec = '00';
-          }
-        } else {
-          newMs = this.msConvert(Number(newMs));
-        }
+  timer = prevTime => () => {
+    const currTime = Date.now();
+    const { miliseconds, seconds, minutes } = this.state;
+    let newMs = Number(miliseconds) + (currTime - prevTime);
+    let newSec = Number(seconds);
+    let newMins = Number(minutes);
+    if (newMs > 999) {
+      newMs = 0;
+      newSec += 1;
+      if (newSec === 60) {
+        newSec = 0;
+        newMins += 1;
+      }
+    }
+    this.setState(
+      {
+        miliseconds: this.msConvert(newMs),
+        seconds: this.convertToTimeFormat(newSec),
+        minutes: this.convertToTimeFormat(newMins),
+      },
+      () => {
+        this.timerId = requestAnimationFrame(this.timer(currTime));
+      }
+    );
+  };
 
-        this.setState(() => {
-          return {
-            miliseconds: newMs.slice(0, 3),
-            seconds: newSec,
-            minutes: newMins,
-          };
-        });
-      }, 17);
-    });
+  convertToTimeFormat = time => {
+    return time < 10 ? `0${time}` : `${time}`;
   };
 
   msConvert = ms => {
-    const msResult = ms + 17;
-    if (msResult > 9 && msResult < 100) {
-      return `0${msResult}`;
+    if (ms > 9 && ms < 100) {
+      return `0${ms}`;
     }
-    return `${msResult}`;
+    return `${ms}`;
   };
 
   clean = () => {
@@ -69,17 +72,16 @@ class Timer extends React.Component {
       seconds: '00',
       miliseconds: '000',
     });
-    clearInterval(this.timerId);
+    cancelAnimationFrame(this.timerId);
   };
 
-  stopTimer = e => {
-    e.preventDefault();
+  stopTimer = event => {
+    event.preventDefault();
     this.clean();
   };
 
   render() {
     const { minutes, seconds, miliseconds, playBtnIsActive } = this.state;
-
     const play = playBtnIsActive ? 'pause-circle' : 'play-circle';
     return (
       <div className="app__timer timer">
